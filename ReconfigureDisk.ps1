@@ -1,9 +1,3 @@
-#   Notes 
-#   Script name: ReconfigureDisk.ps1
-#   Author:      Christopher MOGIS
-#   DateCreated: 
-#
-
 $ExtraDrive = Get-WmiObject win32_logicaldisk -Filter "DeviceID ='D:'"
 
 if ($ExtraDrive.DeviceID -eq 'D:') {
