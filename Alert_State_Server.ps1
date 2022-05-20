@@ -15,7 +15,7 @@ $Option
 		}
 		else 
 		{ 
-    Write-Host "The folder	"C:\Logs\" already exists !"
+    Write-Host "The folder "C:\Logs\" already exists !"
     }
 }
 
@@ -30,7 +30,7 @@ $Option
 
 # Define the email address to send notifications to
     $to = "YourEmailAdress"
-	$to2 = "OtherEmailAdress"
+    $to2 = "OtherEmailAdress"
 	
 If ($Option -eq "Reboot")
 {
