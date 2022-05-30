@@ -33,15 +33,15 @@ $Option
     $to2 = "OtherEmailAdress"
 	
 If ($Option -eq "Reboot")
-{
+	{
 #Send the notification
     Write-Output "$($Date) Send alert email to $($to) and $($to2) : The server $Server has rebooted." | Tee-Object -FilePath $LogPath -Append
 	Send-MailMessage -To $($to;$to2) -From "SenderEmailAdress" -SmtpServer SmtpAdress -Subject "$Client - $Server - Server Reboot" -Body "The server $Server has rebooted."
-}
+	}
 
 If  ($Option -eq "Shutdown")
-{
+	{
 #Send the notification
     Write-Output "$($Date) Send alert email to $($to) and $($to2) : The server $Server has been shutdown." | Tee-Object -FilePath $LogPath -Append
 	Send-MailMessage -To $($to;$to2) -From "SenderEmailAdress" -SmtpServer SmtpAdress -Subject "$Client - $Server - Server Shutdown" -Body "The server $Server has been shutdown."
-}
+	}
